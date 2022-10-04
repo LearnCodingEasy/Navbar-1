@@ -1,0 +1,350 @@
+// ? =====       GOOGLE FONTS                  =====
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+// ? =====       VARIABLES CSS                 =====
+
+:root {
+  // => Global Color
+  --bg-color-Header-Footer: #d3eaf8;
+  --color-Header-Footer: #000;
+  --color-fff: #fff;
+  --color-000: #000;
+  --Color-060606: #060606;
+
+  // => Size With Rem
+  --size-0rem: 0rem;
+  --size-05rem: 0.5rem;
+  --size-1rem: 1rem;
+  --size-105rem: 1.5rem;
+  --size-2rem: 2rem;
+  --size-205rem: 205rem;
+  --size-3rem: 3rem;
+  --size-305rem: 305rem;
+
+  // =>  Font
+  // 1 Name
+  --font-page-name: "Poppins", sans-serif;
+  // 2 Size
+  --font-page-size: 16px;
+  // 3 weight
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+
+  // => Container
+  --container-width: 960px;
+
+  // => z index
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  // => Scroll Bar
+  --scrollbar: #000000;
+  --scrollbar-thumb: #ffffff;
+  --scrollbar-width: 1rem;
+  --scrollbar-border-radius: 0.25rem;
+
+  // => Body
+  --body-bg-color: #eaf0f2;
+  --body-color: #100f0f;
+  --body-font-name: var(--font-page-name);
+  --body-font-size: var(--font-page-size);
+  --body-margin-top: var(--size-3rem);
+
+  // => Header
+  --header-bg-color: var(--bg-color-Header-Footer);
+  --header-color: var(--color-Header-Footer);
+  --header-color-hover: #100f0f;
+  --header-height: var(--size-3rem);
+  --header-active-link: #6174c2;
+  --header-font-size: 16px;
+
+  // => Main
+  --main-bg-color: #fff;
+  --main-color: #000;
+
+  // => Footer
+  --footer-bg-color: var(--bg-color-Header-Footer);
+  --footer-color: #000;
+
+  // => Scroll Top
+  --scroll-top-bg-color: var(--bg-color-Header-Footer);
+  --scroll-top--color: var(--color-000);
+  --scroll-top--hover-bg-color: var(--header-active-link);
+  --scroll-top-icon-bg-color: var(--color-fff);
+  --scroll-top-icon-color: var(--color-000);
+}
+
+// ? =====       BASE                          =====
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  background: var(--scrollbar);
+  width: var(--scrollbar-width);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-border-radius);
+}
+
+// ? =====       Layout                        =====
+.container {
+  max-width: var(--container-width);
+  margin-left: var(--size-2rem);
+  margin-right: var(--size-2rem);
+  // Css Media: Small Devices (Desktops, 960px)
+  @media screen and (min-width: 960px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// ? =====       Body                          =====
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-color);
+  margin: var(--body-margin-top) 0 0 0;
+  font-family: var(--body-font-name);
+  font-size: var(--body-font-size);
+  line-height: 1.6;
+  &.dark-theme {
+    background-color: var(--body-color);
+    color: var(--body-bg-color);
+    // => Color
+    --color-fff: #000;
+    --color-000: #fff;
+
+    // => Header
+    --header-bg-color: #6174c2;
+    --header-active-link: var(--bg-color-Header-Footer);
+
+    // => Main
+    --main-bg-color: #212121;
+    --main-color: #fff;
+
+    // => Footer
+    --footer-bg-color: #6174c2;
+    --footer-color: #fff;
+
+    // => Scroll Top
+    --scroll-top-bg-color: #6174c2;
+    --scroll-top--hover-bg-color: var(--header-active-link);
+    --scroll-top-icon-color: var(--color-fff);
+  }
+}
+// Css Media: Medium Devices (Tablets, 768px)
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+}
+
+// ? =====       Header                       =====
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--header-bg-color);
+  color: var(--header-color);
+  // => Change Background Header
+  &.scroll-header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  // 1 Nav
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      height: calc(var(--header-height) + 1.5rem);
+    }
+    // A Logo
+    .nav-logo {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: var(--color-000);
+      font-weight: var(--font-weight-600);
+      &:hover {
+        color: var(--header-color-hover);
+      }
+    }
+
+    // Div Nav Menu
+    .nav-menu {
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        // top: var(--header-height);
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--header-bg-color);
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: var(--z-fixed);
+        transition: 0.4s;
+      }
+
+      // Show Menu On Media Small
+      &.show-menu {
+        top: var(--header-height);
+      }
+      // Ul
+      .nav-list {
+        @media screen and (min-width: 768px) {
+          display: flex;
+        }
+        // Li
+        .nav-item {
+          @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+            &:not(:last-child) {
+              margin-left: var(--size-3rem);
+            }
+            &:last-child {
+              margin-top: 5px;
+            }
+          }
+          &:not(:last-of-type) {
+            margin-left: var(--size-2rem);
+          }
+          // A
+          .nav-link {
+            color: var(--header-color);
+            font-size: calc(var(--header-font-size) + 4px);
+            font-weight: var(--font-weight-500);
+            text-transform: capitalize;
+            transition: 0.3s;
+            &:hover {
+              color: var(--header-active-link);
+            }
+            // Active Menu
+            &.active-link {
+              color: var(--header-active-link);
+              font-weight: bold;
+              font-size: calc(var(--body-font-size) + 5px);
+            }
+          }
+
+          // =>  Button Dark/Light
+          .change-theme {
+            position: absolute;
+            right: 2rem;
+            top: 2.8rem;
+            color: var(--text-color);
+            font-size: 1rem;
+            cursor: pointer;
+            // Css Media Medium Devices (Tablets, 768px )
+            @media screen and (min-width: 768px) {
+              position: initial;
+              top: 1.8rem;
+              margin-left: var(--size-2rem);
+            }
+          }
+        }
+      }
+    }
+
+    // Div Nav Toggle
+    .nav-toggle {
+      font-size: 1.5rem;
+      color: var(--header-color);
+      font-weight: var(--font-weight-500);
+      cursor: pointer;
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+// ? =====       Main                         =====
+.main {
+  .container {
+    .home,
+    .about,
+    .services,
+    .team,
+    .contact {
+      margin: 3rem 0;
+      height: calc(100vh - 3rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--main-bg-color);
+      color: var(--main-color);
+      h2 {
+        font-size: 15vw;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// ? =====       Footer                       =====
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-color);
+  height: 50vh;
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-size: 20vh;
+      font-weight: bold;
+    }
+  }
+}
+
+// ? =====       Scroll Top                   =====
+.scroll-top {
+  position: fixed;
+  right: 1rem;
+  // bottom: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background: var(--scroll-top-bg-color);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  // visibility: visible;
+  visibility: hidden;
+  &:hover {
+    background-color: var(--scroll-top--hover-bg-color);
+  }
+  .scroll-top-icon {
+    font-size: 1.8rem;
+    color: var(--scroll-top-icon-color);
+  }
+  &.show-scroll-top {
+    visibility: visible;
+    bottom: 1.5rem;
+  }
+}
