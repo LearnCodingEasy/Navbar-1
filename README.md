@@ -14,7 +14,7 @@ Awesome Navbar
 
 # Images
 * Unsplash
-[View](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/Navbar-1920.jpg)
+[View](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/images/Navbar-1920.jpg)
 
 # Icon
 * Box Icons
