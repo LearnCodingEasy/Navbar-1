@@ -22,5 +22,10 @@ Awesome Navbar
 [View](https://scrollrevealjs.org/guide/hello-world.html)
 
 
+```
+npm install
+``` 
+
+
 # Preview
 ![This is an image](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/dist/images/Navbar-1920.jpg)
