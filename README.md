@@ -26,6 +26,9 @@ Awesome Navbar
 npm install
 ``` 
 
+# View
+[View](https://learncodingeasy.github.io/Navbar-1/dist/)
+
 
 # Preview
 ![This is an image](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/dist/images/Navbar-1920.jpg)
