@@ -19,5 +19,22 @@
     "gulp-pug": "^5.0.0",
     "static-server": "^2.2.1",
     "vinyl-ftp": "^0.6.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "awsome-navbar",
+  "description": "Awesome Navbar",
+  "version": "1.0.0",
+  "main": "Build.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LearnCodingEasy/Navbar-1.git"
+  },
+  "author": "Hossam Rashad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LearnCodingEasy/Navbar-1/issues"
+  },
+  "homepage": "https://github.com/LearnCodingEasy/Navbar-1#readme"
 }
