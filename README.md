@@ -12,9 +12,6 @@ Awesome Navbar
 # Tools
 1. Gulp
 
-# Images
-* Unsplash
-[View]([https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/images/Navbar-1920.jpg](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/dist/images/Navbar-1920.jpg))
 
 # Icon
 * Box Icons
@@ -23,3 +20,7 @@ Awesome Navbar
 # Plugins
 * Scroll Reveal
 [View](https://scrollrevealjs.org/guide/hello-world.html)
+
+
+# Preview
+[View](https://raw.githubusercontent.com/LearnCodingEasy/Navbar-1/main/dist/images/Navbar-1920.jpg)
